@@ -1,6 +1,6 @@
-# Breast-Cancer-Wisconsin-Diagnosis
+# Breast Cancer Wisconsin Diagnosis
 
-This project focuses on the classification of breast cancer tumors as either malignant or benign using the Breast Cancer Wisconsin (Diagnostic) Dataset from Kaggle. The goal of the project is to build machine learning models that can accurately predict whether a tumor is malignant (cancerous) or benign (non-cancerous), based on the characteristics of the tumor.
+This repository focuses on the classification of breast cancer tumors as either malignant or benign using the Breast Cancer Wisconsin (Diagnostic) Dataset from Kaggle. The goal of the project is to build machine learning models that can accurately predict whether a tumor is malignant (cancerous) or benign (non-cancerous), based on the characteristics of the tumor.
 
 ### Project Overview
 
