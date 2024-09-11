@@ -41,13 +41,15 @@ After visualizing the data, I proceed to reduce dimensionality by applying both 
 Once the data is prepared, I train several machine learning models to classify tumors as malignant or benign. The models include:
 
 <ul>
+<li>Random Forest</li>
+
+<li>Logistic Regression</li>
+
 <li>K-Nearest Neighbors (KNN)</li>
 
 <li>Support Vector Machines (SVM)</li>
 
-<li>Random Forest</li>
-
-<li>Logistic Regression</li>
+<li>XGBoost</li>
 </ul>
 
 I use cross-validation to assess model performance and fine-tune hyperparameters. The evaluation metrics include accuracy, precision, recall, F1-score, and the confusion matrix to ensure a comprehensive understanding of model effectiveness, especially in the presence of an imbalanced dataset.
