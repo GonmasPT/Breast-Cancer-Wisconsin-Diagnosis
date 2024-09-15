@@ -31,9 +31,9 @@ To begin, I explore the dataset through a series of visualizations to understand
 After visualizing the data, I proceed to reduce dimensionality by applying feature selection techniques:
 
 <ul>
-<li>Manual Selection: Based on a correlation heatmap, highly correlated features were manually removed to avoid multicollinearity. By removing one feature from each highly correlated pair, I ensured that the model does not rely on redundant information, improving its interpretability and performance.</li>
+<li>Manual Selection: Based on a correlation heatmap, highly correlated features are manually removed to avoid multicollinearity. By removing one feature from each highly correlated pair, I ensured that the model does not rely on redundant information, improving its interpretability and performance.</li>
 
-<li>RFECV: Recursive Feature Elimination with Cross-Validation was applied to automatically rank and select the most important features. This method recursively removes the least important features and uses cross-validation to evaluate model performance. The optimal number of features was determined based on the model's performance, ensuring that only the most relevant features are kept for training the model.</li>
+<li>RFECV: Recursive Feature Elimination with Cross-Validation is applied to automatically rank and select the most important features.</li>
 </ul>
 
 ### 3. Model Development
