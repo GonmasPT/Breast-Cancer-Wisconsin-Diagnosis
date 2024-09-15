@@ -9,9 +9,9 @@ The project is structured in three main stages:
 <ol>
 <li>Data Visualization</li>
 
-<li>Feature Selection and Feature Extraction</li>
+<li>Feature Selection</li>
 
-<li>Machine Learning Model Training</li>
+<li>Model Development</li>
 </ol>
 
 ### 1. Data Visualization
@@ -21,22 +21,22 @@ To begin, I explore the dataset through a series of visualizations to understand
 <ul>
 <li>Examining the class distribution of the target variable (malignant vs. benign).</li>
 
-<li>Visualizing individual features using box plots, swarm plots, and histograms to identify trends and outliers.</li>
+<li>Visualizing individual features using box plots and swarm plots to identify trends and outliers.</li>
 
-<li>Studying feature relationships and correlations using scatter plots and heatmaps to detect highly correlated features and gain insights into feature interactions.</li>
+<li>Studying feature relationships and correlations using heatmaps to detect highly correlated features and gain insights into feature interactions.</li>
 </ul>
 
-### 2. Feature Selection and Feature Extraction
+### 2. Feature Selection
 
-After visualizing the data, I proceed to reduce dimensionality by applying both feature selection and feature extraction techniques:
+After visualizing the data, I proceed to reduce dimensionality by applying feature selection techniques:
 
 <ul>
-<li>Feature Selection: Identifying the most relevant features that contribute to the classification task. I evaluate feature importance using methods like correlation analysis and statistical tests, removing redundant or irrelevant features.</li>
+<li>Manual Selection: Based on a correlation heatmap, highly correlated features were manually removed to avoid multicollinearity. By removing one feature from each highly correlated pair, I ensured that the model does not rely on redundant information, improving its interpretability and performance.</li>
 
-<li>Feature Extraction: Techniques such as Principal Component Analysis (PCA) are used to transform the feature set into a lower-dimensional space, capturing the most significant variance in the data while reducing noise and complexity.</li>
+<li>RFECV: Recursive Feature Elimination with Cross-Validation was applied to automatically rank and select the most important features. This method recursively removes the least important features and uses cross-validation to evaluate model performance. The optimal number of features was determined based on the model's performance, ensuring that only the most relevant features are kept for training the model.</li>
 </ul>
 
-### 3. Machine Learning Model Training
+### 3. Model Development
 
 Once the data is prepared, I train several machine learning models to classify tumors as malignant or benign. The models include:
 
@@ -52,7 +52,7 @@ Once the data is prepared, I train several machine learning models to classify t
 <li>XGBoost</li>
 </ul>
 
-I use cross-validation to assess model performance and fine-tune hyperparameters. The evaluation metrics include accuracy, precision, recall, F1-score, and the confusion matrix to ensure a comprehensive understanding of model effectiveness, especially in the presence of an imbalanced dataset.
+I applied cross-validation to evaluate the performance of each model, using recall as the primary metric throughout the notebook. Recall was chosen to prioritize minimizing false negatives, particularly important for this classification task. After identifying the best-performing model, I further assessed its performance using additional metrics, including accuracy, precision, and F1-score, for a more comprehensive evaluation.
 
 ### Dataset
 
